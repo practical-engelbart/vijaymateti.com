@@ -1,0 +1,4 @@
+baseURL = "https://vijaymateti.com"
+languageCode = "en-us"
+title = "Vijay Mateti's Blog"
+theme = "tranquilpeak"
