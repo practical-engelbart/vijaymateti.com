@@ -4,8 +4,8 @@ run-as: Linux-user-name
 
 env:
   variables:
-    IMAGE_REPO_NAME=hugo
-    IMAGE_TAG=alpine
+    IMAGE_REPO_NAME="hugo"
+    IMAGE_TAG="alpine"
   parameter-store:
            
 phases:
