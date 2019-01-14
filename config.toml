@@ -32,16 +32,16 @@ canonifyurls = true
 
 [author]
   name = "Vijay Mateti"
-  bio = "Super bio with markdown support **COOL**"
-  job = "Solutions Engineer Advisor Sr @ **Anthem Inc**"
-  location = "France"
+  bio = "Technology Enthusist, Father and Loving Husband!"
+  job = "Solutions Engineer Advisor Senior at Anthem Inc"
+  location = "Virginia Beach, Virginia"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "thibaud.lepretre@gmail.com"
+  # gravatarEmail = "thibaud.lepretre@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
   # Your Twitter username without the @. E.g : thibaudlepretre
-  # twitter = "thibaudlepretre"
+  twitter = "vmateti"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
   # googlePlus = "+ThibaudLepretre"
 
