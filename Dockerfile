@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-MAINTAINER Vijay Mateti <vijaymateti@gmail.com>
+LABEL maintainer="Vijay Mateti <vijaymateti@gmail.com>" 
 
 RUN apk add --no-cache \
     curl \
