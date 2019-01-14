@@ -34,7 +34,7 @@ canonifyurls = true
   name = "Vijay Mateti"
   bio = "Technology Enthusist, Father and Loving Husband!"
   job = "Solutions Engineer Advisor Senior at Anthem Inc"
-  location = "Virginia Beach, Virginia"
+  location = "Virginia"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   # gravatarEmail = "thibaud.lepretre@gmail.com"
   # Your profile picture
