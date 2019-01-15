@@ -1,31 +1,37 @@
 version: 0.2
 
-env:
-  variables:
-    IMAGE_REPO_NAME="hugo"
-    IMAGE_TAG="alpine"
-    AWS_ACCOUNT_ID="109358011185"
-    AWS_DEFAULT_REGION="us-east-1"
-  parameter-store:
-           
+#env:
+  #variables:
+     # key: "value"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+
 phases:
+  #install:
+    #commands:
+      # - command
+      # - command
   pre_build:
-  
     commands:
-      - echo Logging in to Amazon ECR...
-      - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+      # - command
   build:
     commands:
-      - echo Build started on `date`
-      - echo Building the Docker image...          
-      - docker build --build-arg HUGO_VERSION=0.53 -t $IMAGE_REPO_NAME:$IMAGE_TAG .
-      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+       - docker build --build-arg HUGO_VERSION=0.53 -t $IMAGE_REPO_NAME:$IMAGE_TAG .
+       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
   post_build:
     commands:
-      - echo Build completed on `date`
-      - echo Pushing the Docker image...
-      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
- 
-
-  
- 
+       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+      # - command
+#artifacts:
+  #files:
+    # - location
+    # - location
+  #name: $(date +%Y-%m-%d)
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - paths
