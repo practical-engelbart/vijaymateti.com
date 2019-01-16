@@ -15,12 +15,12 @@ phases:
       # - command
   pre_build:
     commands:
-       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
-       - docker pull $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+      # - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+      # - docker pull $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
       # - command
   build:
     commands:
-       - docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG hugo
+       - docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo vijaymateti/hugo:alpine hugo
 
   post_build:
     commands:
