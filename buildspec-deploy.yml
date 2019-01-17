@@ -16,7 +16,7 @@ phases:
   pre_build:
     commands:
       # - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
-      # - docker pull $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+       - docker pull vijaymateti/hugo:alpine
       # - command
   build:
     commands:
