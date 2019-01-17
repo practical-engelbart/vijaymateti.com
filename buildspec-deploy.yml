@@ -20,7 +20,7 @@ phases:
       # - command
   build:
     commands:
-       - docker run --rm  -v $PWD:/src -u hugo vijaymateti/hugo:alpine hugo --help
+       - docker run --rm  -v $PWD:/src -u hugo vijaymateti/hugo:alpine hugo
 
   post_build:
     commands:
