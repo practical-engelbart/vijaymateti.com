@@ -16,7 +16,7 @@ phases:
   pre_build:
     commands:
       # - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
-       - docker pull vijaymateti/hugo:alpine
+      # - docker pull vijaymateti/hugo:alpine
       # - command
   build:
     commands:
