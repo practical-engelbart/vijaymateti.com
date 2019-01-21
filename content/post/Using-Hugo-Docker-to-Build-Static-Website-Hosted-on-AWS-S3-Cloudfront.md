@@ -158,14 +158,12 @@ Follow the [user guide](https://github.com/kakawait/hugo-tranquilpeak-theme/blob
 
 To preview your draft changes, execute following docker command inside your repo folder and view it your browser url http://localhost:1313/
 ```shell
-docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo vijaymateti
-/hugo:latest hugo server -wD -d dev --bind=0.0.0.0
+docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo vijaymateti/hugo:latest hugo server -wD -d dev --bind=0.0.0.0
 ```
 
 When you are ready to publish your site execute following command and it will create `public` folder with static site content.
 ```shell
-docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo vijaymateti
-/hugo:latest hugo
+docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo vijaymateti/hugo:latest hugo
 ```
 
 ## 5. Sync your site with S3
