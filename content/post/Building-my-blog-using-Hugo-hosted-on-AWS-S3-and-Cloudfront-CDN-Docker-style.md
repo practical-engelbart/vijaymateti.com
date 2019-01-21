@@ -97,4 +97,4 @@ At the time of writing this post `v0.53` is latest version of Hugo and you can b
 docker build --build-arg HUGO_VERSION=0.53 --rm -f "Dockerfile" -t hugo:latest .
 ```
 
-May be you can wrap them all up in Makefile but I like to run these commands on terminal to feel connected with docker.
+May be you can wrap them all up in Makefile but I like to run these commands on terminal to feel connected with docker once in a while.
