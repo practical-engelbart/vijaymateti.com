@@ -175,8 +175,7 @@ Make sure you create AWS IAM user with policies restricted to S3 write.
 Here is the command that I execute to sync `public` folder contents to my S3 bucket using custom IAM user `hugo`
 
 ```shell
-aws s3 sync --acl "public-read" --sse "AES256" public/ s3://vijayma
-teti.com --delete --profile hugo
+aws s3 sync --acl "public-read" --sse "AES256" public/ s3://vijaymateti.com --delete --profile hugo
 ```
 
 
