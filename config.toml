@@ -32,7 +32,7 @@ canonifyurls = true
 
 [author]
   name = "Vijay Mateti"
-  bio = "Technology Enthusiast, Father and Loving Husband!"
+  bio = "Technology Enthusiast and Geek for life!"
   job = "Solutions Engineer Advisor Senior at Anthem Inc"
   location = "Virginia"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
