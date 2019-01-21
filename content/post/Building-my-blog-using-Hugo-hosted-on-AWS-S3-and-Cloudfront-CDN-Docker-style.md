@@ -34,7 +34,7 @@ I was debating if I should host my blog on popular sites like Medium or use <acr
 I came across [Hugo](https://gohugo.io/) while I was looking to contribute few modification to [Kubernetes website](https://github.com/kubernetes/website) and It was love at first sight.
 
 ## Why is Hugo Awesome?
-- World's fastest static site generator, you can build and preview your change in milliseconds
+- Blazing fast static site generator where you can build and preview your change in milliseconds
 - GitHub style markdown syntax with Hugo's powerful shortcodes
 - No additional installation needed if you already have Docker
 - Website can be hosted on Firebase or AWS S3 along with Cloudfront CDN without any need for database or web server
@@ -46,7 +46,7 @@ I came across [Hugo](https://gohugo.io/) while I was looking to contribute few m
 1. Make sure you have a domain name on on popular registrars like Google Domains/GCP Cloud DNS or AWS Route 53. I got [vijaymateti.com](https://vijaymateti.com) on AWS Route 53
 
 
-2. Create your own Hugo docker image or you can pull my Hugo docker image [vijaymateti/hugo:latest](https://hub.docker.com/r/vijaymateti/hugo) from Docker Hub which is built nightly on AWS Codebuild using alpine base image. 
+2. Create your own Hugo docker image or you can pull my Hugo docker image [vijaymateti/hugo:latest](https://hub.docker.com/r/vijaymateti/hugo) from Docker Hub which is built nightly on AWS CodeBuild using alpine base image. 
 
 
 {{< codeblock "Dockerfile" "dockerfile" "https://github.com/vijaymateti/vijaymateti.com/blob/master/Dockerfile" "Dockerfile" >}}
@@ -79,6 +79,22 @@ WORKDIR /src
 EXPOSE 1313
 {{< /codeblock >}}
 
-Thanks for Kubernetes website for my Dockerfile as it uses the best practice of creating non-root user for running the `hugo` command.
+Thanks to Kubernetes website for my Dockerfile as it uses the container best practice of creating non-root user for running the `hugo` command.
 
-I'm using Hugo extended for my build, you can comment that if you want standard Hugo.
+I'm using hugo extended for my build, you can comment that if you want standard Hugo.
+
+Latest hugo version can be found by running the following command :
+
+```shell
+curl -Is https://github.com/gohugoio/hugo/releases/latest \
+| grep -Fi Location \
+| sed -E 's/.*tag\/v(.*)/\1/g;'
+```
+
+At the time of writing this post `v0.53` is latest version of Hugo and you can build your docker image by issuing the following command. 
+
+```
+docker build --build-arg HUGO_VERSION=0.53 --rm -f "Dockerfile" -t hugo:latest .
+```
+
+May be you can wrap them all up in Makefile but I like to run these commands on terminal to feel connected with docker.
