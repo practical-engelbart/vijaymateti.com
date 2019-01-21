@@ -29,7 +29,7 @@ Hugo is one of very cool open source static site generators which is built on Go
 I was an avid Tech blogger a decade ago where I used to get hundreds of unique visits everyday and then I suddently stopped. With all my recent work in Cloud computing space I decided to build my personal website in the most developer way possible to share my view on the emerging technologies. 
 
 
-I was debating if I should host my blog on popular sites like Medium or use <acronym title="Content Management System">CMS</acronym> like Wordpress/Drupal on my personal AWS/GCP accounts. Finally I decided to this fun little experiment to host the site on my own without using any traditional CMS. 
+I was debating if I publish my views on popular sites like Medium or use <acronym title="Content Management System">CMS</acronym> like Wordpress/Drupal on my personal AWS/GCP accounts. Finally I decided to try fun little experiment to host the site on my own without using any traditional CMS. 
 
 I came across [Hugo](https://gohugo.io/) while I was looking to contribute few modification to [Kubernetes website](https://github.com/kubernetes/website) and It was love at first sight.
 
