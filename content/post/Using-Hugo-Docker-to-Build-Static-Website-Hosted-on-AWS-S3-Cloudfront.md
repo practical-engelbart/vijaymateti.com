@@ -24,6 +24,8 @@ metaAlignment: center
 Hugo is one the of very cool open source static site generators which is built on Go and is used by popular websites like [Kubernetes](https://kubernetes.io/). You can follow through the steps mentioned in this post to host your website on AWS S3 and Cloudfront CDN.
 <!--more-->
 
+<!--toc-->
+
 # Little History
 I was an avid Tech blogger a decade ago where I used to get hundreds of unique visits everyday and then I suddenly stopped. With all my recent work in Cloud computing space I decided to build my personal website in the most developer way possible to share my views on the emerging technologies. 
 
@@ -61,9 +63,7 @@ Use AWS Cloudfront CDN to cache your site on global edge locations for faster lo
 S3 static websites with Cloudfront CDN has problem serving prettyURLs which can be resolved by deploying this Lambda@Edge function. You can follow through the instructions here to [Implementing Default Directory Indexes in Amazon S3-backed Amazon CloudFront Origins Using Lambda@Edge](https://aws.amazon.com/blogs/compute/implementing-default-directory-indexes-in-amazon-s3-backed-amazon-cloudfront-origins-using-lambdaedge/)
 
 
-## 4. Setup Hugo Site
-
-### Create or Pull latest Hugo Docker image
+## 4. Create or Pull latest Hugo Docker image
 
 Create your own Hugo docker image or you can pull my Hugo docker image [vijaymateti/hugo:latest](https://hub.docker.com/r/vijaymateti/hugo) from Docker Hub which is built nightly on AWS CodeBuild using alpine base image. 
 
@@ -118,7 +118,7 @@ docker build --build-arg HUGO_VERSION=0.53 --rm -f "Dockerfile" -t hugo:latest .
 
 May be you can wrap them all up in Makefile but I like to run these commands on terminal to feel connected with docker and aws cli once in a while.
 
-### Create your Hugo site 
+## 5. Create your Hugo site 
 
 ```shell
 mkdir yourdomain.com
@@ -139,7 +139,7 @@ dev/
 public/
 {{< /codeblock >}}
 
-### Customize your Site
+## 6. Customize your Site
 
 You can use your favorite editor to customize your site. I love Visual Studio Code on my Mac to split screen and live-preview the changes in browser every time I save.
 
@@ -165,7 +165,7 @@ When you are ready to publish your site execute following command and it will cr
 docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo vijaymateti/hugo:latest hugo
 ```
 
-## 5. Sync your site with S3
+## 7. Sync your site with S3
 
 Make sure you create AWS IAM user with policies restricted to S3 write.
 
