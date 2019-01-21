@@ -1,7 +1,7 @@
-# Ignore dev/ folder where drafts are published
+# Ignore dev/ folder
 
 dev/
 
-# Ignore dublic/ folder
+# Ignore public/ folder
 
 public/
