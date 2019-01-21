@@ -11,7 +11,6 @@ tags:
 - github
 - dockerhub
 - cloudfront
-- docker
 keywords:
 - disqus
 - google
