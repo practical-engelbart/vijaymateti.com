@@ -162,7 +162,7 @@ docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo vijaymateti/hugo:latest hu
 
 When you are ready to publish your site execute following command and it will create `public` folder with static site content.
 ```shell
-docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo vijaymateti/hugo:latest hugo
+docker run --rm -it -v $PWD:/src -p 1313:1313 -u hugo vijaymateti/hugo:latest hugo --minify
 ```
 
 ## 7. Sync your site with S3
@@ -174,7 +174,10 @@ Here is the command that I execute to sync `public` folder contents to my S3 buc
 ```shell
 aws s3 sync --acl "public-read" --sse "AES256" public/ s3://vijaymateti.com --delete --profile hugo
 ```
+# Credits
+I would like to thank the contributers of [Hugo](https://gohugo.io), [Kubernetes](https://kubernetes.io) and [Alina Mackenzie](https://alimac.io) showing me the recipes to build this blog.
 
+Let me know if you have any suggestion on my post in the comments. Thank you for going through this lengthy post.
 
 
 
