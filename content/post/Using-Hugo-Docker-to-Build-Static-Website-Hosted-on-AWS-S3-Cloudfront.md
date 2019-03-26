@@ -27,16 +27,16 @@ Hugo is one the of very cool open source static site generators which is built o
 <!--toc-->
 
 # Little History
-I was an avid Tech blogger a decade ago where I used to get hundreds of unique visits everyday and then I suddenly stopped. With all my recent work in Cloud computing space I decided to build my personal website in the most developer way possible to share my views on the emerging technologies. 
+I was an avid Tech blogger a decade ago where I used to get hundreds of unique visits every day and then I suddenly stopped. With all my recent work in Cloud computing space I decided to build my personal website in the most developer way possible to share my views on the emerging technologies. 
 
 
-I was debating if I publish my views on popular sites like Medium or use <acronym title="Content Management System">CMS</acronym> like WordPress/Drupal on my personal AWS/GCP accounts. Finally I decided to try fun little experiment to host the site on my own without using any traditional CMS. 
+I was debating if I publish my views on popular sites like Medium or use <acronym title="Content Management System">CMS</acronym> like WordPress/Drupal on my personal AWS/GCP accounts. Finally, I decided to try fun little experiment to host the site on my own without using any traditional CMS. 
 
 I came across [Hugo](https://gohugo.io/) while I was looking to contribute few modification to [Kubernetes website](https://github.com/kubernetes/website) and it was love at first sight.
 
 ## Why is Hugo Awesome?
 - Blazing fast static site generator where you can build and preview your changes in milliseconds
-- GitHub style markdown syntax with Hugo's powerful shortcodes
+- GitHub style markdown syntax with Hugo's powerful short codes
 - No additional installation needed if you already have Docker
 - Website can be hosted on Firebase or AWS S3 along with Cloudfront CDN without any need for database or web server
 - Version control of your code in Git repositories
@@ -47,7 +47,7 @@ I came across [Hugo](https://gohugo.io/) while I was looking to contribute few m
 You can follow through below steps on AWS Console by referring the associate guides. I could have attached Terraform or CloudFormation templates but you wouldn't get the feel of building it by hand.
 
 ## 1. Prep your domain name
-Make sure you have a domain name on on popular registrars like Google Domains/GCP Cloud DNS or AWS Route 53. I got [vijaymateti.com](https://vijaymateti.com) on AWS Route 53 for $12 per year.
+Make sure you have a domain name on popular registrars like Google Domains/GCP Cloud DNS or AWS Route 53. I got [vijaymateti.com](https://vijaymateti.com) on AWS Route 53 for $12 per year.
 
 Setup your SSL certificate on AWS Certificate Manager which can be associated to both yourdomain.com and www.yourdomain.com. 
 
@@ -116,7 +116,7 @@ At the time of writing this post `v0.53` is latest version of Hugo and you can b
 docker build --build-arg HUGO_VERSION=0.53 --rm -f "Dockerfile" -t hugo:latest .
 ```
 
-May be you can wrap them all up in Makefile but I like to run these commands on terminal to feel connected with docker and aws cli once in a while.
+Maybe you can wrap them all up in Makefile but I like to run these commands on terminal to feel connected with docker and aws cli once in a while.
 
 ## 5. Create your Hugo site 
 
@@ -175,7 +175,7 @@ Here is the command that I execute to sync `public` folder contents to my S3 buc
 aws s3 sync --acl "public-read" --sse "AES256" public/ s3://vijaymateti.com --delete --profile hugo
 ```
 # Credits
-I would like to thank the contributers of [Hugo](https://gohugo.io), [Kubernetes](https://kubernetes.io) and [Alina Mackenzie](https://alimac.io) showing me the recipes to build this blog.
+I would like to thank the contributors of [Hugo](https://gohugo.io), [Kubernetes](https://kubernetes.io) and [Alina Mackenzie](https://alimac.io) showing me the recipes to build this blog.
 
 Let me know if you have any suggestion on my post in the comments. Thank you for going through this lengthy post.
 
