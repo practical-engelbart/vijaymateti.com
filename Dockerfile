@@ -10,7 +10,9 @@ RUN apk add --no-cache \
     build-base \
     libc6-compat
 
-ARG HUGO_VERSION
+RUN HUGO_VERSION=$(curl -Is https://github.com/gohugoio/hugo/releases/latest \
+    | grep -Fi Location \
+    | sed -E 's/.*tag\/v(.*)/\1/g;')
 
 RUN mkdir -p /usr/local/src && \
     cd /usr/local/src && \
