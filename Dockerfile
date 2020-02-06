@@ -13,6 +13,7 @@ RUN apk add --no-cache \
 ENV HUGO_VERSION=$(curl -Is https://github.com/gohugoio/hugo/releases/latest \
     | grep -Fi Location \
     | sed -E 's/.*tag\/v(.*)/\1/g;')
+    
 RUN echo $HUGO_VERSION
 
 RUN mkdir -p /usr/local/src && \
